@@ -1,0 +1,15 @@
+<% if @recipes.is_a?(Array) %>
+  <table>
+  <% @recipes.each do |recipe| %>
+    <tr>
+      <td><%= link_to image_tag(recipe["image_url"], size: "100"), recipe["f2f_url"] %></td>
+      <td><%= link_to sanitize(recipe["title"]), recipe["f2f_url"] %></td>
+      <td><%= recipe["social_rank"] %></td>
+    </tr>
+  <% end %>
+  </table>
+<% else %>
+  <tr>
+    <td><%= @recipes %></td>
+  </tr>
+<% end %>
