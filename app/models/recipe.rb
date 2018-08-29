@@ -1,8 +1,8 @@
 class Recipe < ActiveRecord::Base
   include HTTParty
 
-  key_value = ENV['FOOD2FORK_KEY']
-  host_port = ENV['FOOD2FORK_SERVER_AND_PORT']
+  key_value = '9ff0224486848a2f617edcc7f8a29883'
+  host_port = 'www.food2fork.com'
 
   base_uri "http://#{host_port}/api"
   default_params key: key_value
